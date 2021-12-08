@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Tab, Tabs } from './Tabs/Tabs';
 
+
+const tabs = [ 
+  {name: 'Job Focus', disabled: false},
+  {name: 'Soft Skills', disabled: false},
+  {name: 'Technical Skills', disabled: true},
+  {name: 'Functional Expertise', disabled: false},
+  {name: 'Soft Expertise', disabled: false},
+  {name: 'Patent Expertice', disabled: false},
+  {name: 'Personal Expertise', disabled: false},
+  {name: 'Hard Expertise', disabled: false},
+  {name: 'Domain Expertise', disabled: false},
+  {name: 'Social Expertise', disabled: false},
+  {name: 'Reffered expertise', disabled: false},
+];
+  
+const tabsList = tabs.map(t => <Tab name={t.name} disabled={t.disabled}/>);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Tabs>
+        { tabsList }
+      </Tabs>
+      <div className="shadow"/>
+    </>
+
   );
 }
 
