@@ -1,3 +1,3 @@
 # Tab component
 
-Demo version availible [here](fast-pin.surge.sh).
+Demo version availible [here](http://www.fast-pin.surge.sh).
